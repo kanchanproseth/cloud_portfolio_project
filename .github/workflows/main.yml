@@ -3,7 +3,7 @@ name: On Website Deploy
   push:
     # (1)
     branches:
-      - "main"
+      - "develop"
 jobs:
   build_and_deploy_web:
     name: Build & Deploy Flutter to Web
@@ -21,6 +21,7 @@ jobs:
 
       - name: 📦 Get packages
         run: flutter pub get
+
 
       - name: 🏭 Build Web Application
         run: flutter build web --release
