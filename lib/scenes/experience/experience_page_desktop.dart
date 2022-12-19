@@ -116,7 +116,7 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
         tailTitle: StringConst.STARTED_MONTH_YEAR,
         experienceData: Data.experienceData,
         scrollController: _scrollController,
-        widthOfTree: assignWidth(context: context, fraction: 0.62),
+        widthOfTree: assignWidth(context: context, fraction: 0.52),
       ),
     );
   }
@@ -132,8 +132,8 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
       padding: EdgeInsets.only(
         left: (widthOfImage! / 2) + 20,
         top: isDisplaySmallDesktopOrIpadPro(context)
-            ? assignHeight(context: context, fraction: 0.05)
-            : assignHeight(context: context, fraction: 0.12),
+            ? assignHeight(context: context, fraction: 0.02)
+            : assignHeight(context: context, fraction: 0),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
