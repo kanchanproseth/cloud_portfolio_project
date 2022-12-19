@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:cloud_portfolio_project/scenes/about/about_page.dart';
 import 'package:cloud_portfolio_project/scenes/certification/certification_page.dart';
 import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
-import 'package:cloud_portfolio_project/scenes/home/home_page.dart';
 import 'package:cloud_portfolio_project/scenes/portfolio/portfolio_page.dart';
 import 'package:cloud_portfolio_project/scenes/project_detail/project_detail.dart';
 
@@ -59,10 +58,6 @@ class RouteConfiguration {
     Path(
       r'^' + CertificationPage.certificationPageRoute,
       (context, matches) => const CertificationPage(),
-    ),
-    Path(
-      r'^' + HomePage.homePageRoute,
-      (context, matches) => const HomePage(),
     ),
   ];
 
