@@ -109,8 +109,8 @@ class _AboutPageDesktopState extends State<AboutPageDesktop>
 
   initializeTweens() {
     widthOfLeftSide = Tween<double>(
-      begin: 0.5,
-      end: 0.3,
+      begin: 0.3,
+      end: 0.2,
     ).animate(
       CurvedAnimation(
         parent: _controller,
@@ -122,8 +122,8 @@ class _AboutPageDesktopState extends State<AboutPageDesktop>
       ),
     );
     widthOfRightSide = Tween<double>(
-      begin: 0.5,
-      end: 0.7,
+      begin: 0.7,
+      end: 0.8,
     ).animate(
       CurvedAnimation(
         parent: _controller,
@@ -135,7 +135,7 @@ class _AboutPageDesktopState extends State<AboutPageDesktop>
       ),
     );
     widthOfAboutContent = Tween<double>(
-      begin: 0.4,
+      begin: 0.5,
       end: 0.6,
     ).animate(
       CurvedAnimation(
@@ -255,7 +255,7 @@ class _AboutPageDesktopState extends State<AboutPageDesktop>
                       fraction: widthOfLeftSide.value,
                     ),
                     color: AppColors.primaryColor,
-//                    gradient: Gradients.primaryGradient,
+                    gradient: Gradients.primaryGradient,
                     child: Container(
                       margin: EdgeInsets.only(
                         left: Sizes.MARGIN_20,
@@ -354,21 +354,19 @@ class _AboutPageDesktopState extends State<AboutPageDesktop>
                 fontSize: Sizes.TEXT_SIZE_34,
                 controller: _flickerAnimationController.view,
               ),
-              _isSubtitleVisible
-                  ? FlickerTextAnimation(
-                      text: StringConst.PUNCH_LINE,
-                      textColor: AppColors.primaryColor,
-                      fadeInColor: AppColors.primaryColor,
-                      controller: _flickerAnimationController2.view,
-                      textStyle: theme.textTheme.subtitle1!.copyWith(
-                        fontSize: Sizes.TEXT_SIZE_34,
-                        color: AppColors.accentColor2,
-                      ),
-                    )
-                  : Container(),
+              FlickerTextAnimation(
+                text: StringConst.PUNCH_LINE,
+                textColor: AppColors.primaryColor,
+                fadeInColor: AppColors.primaryColor,
+                controller: _flickerAnimationController2.view,
+                textStyle: theme.textTheme.subtitle1!.copyWith(
+                  fontSize: Sizes.TEXT_SIZE_34,
+                  color: AppColors.accentColor2,
+                ),
+              ),
               SpaceH16(),
               AnimatedOpacity(
-                opacity: _visible ? aboutDevAnimation.value : 0.0,
+                opacity: aboutDevAnimation.value,
                 duration: _aboutDevAnimationController.duration!,
                 child: Text(
                   StringConst.ABOUT_DEV_TEXT,
@@ -379,15 +377,13 @@ class _AboutPageDesktopState extends State<AboutPageDesktop>
                 ),
               ),
               SpaceH40(),
-              _isSubMenuListVisible
-                  ? SubMenuList(
-                      subMenuData: Data.subMenuData,
-                      width: assignWidth(
-                          context: context,
-                          fraction: 0.6,
-                          subs: (widthOfImage! / 2) + 20),
-                    )
-                  : Container(),
+              SubMenuList(
+                subMenuData: Data.subMenuData,
+                width: assignWidth(
+                    context: context,
+                    fraction: 0.6,
+                    subs: (widthOfImage! / 2) + 20),
+              ),
             ],
           ),
         ),

@@ -6,7 +6,7 @@ import 'package:cloud_portfolio_project/values/values.dart';
 
 class PortfolioCard extends StatefulWidget {
   PortfolioCard({
-    this.width = 500,
+    this.width = 700,
     this.height = 400,
     this.imageUrl,
     this.elevation,

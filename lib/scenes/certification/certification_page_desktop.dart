@@ -39,25 +39,7 @@ class _CertificationPageDesktopState extends State<CertificationPageDesktop>
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  ContentWrapper(
-                    width: assignWidth(
-                      context: context,
-                      fraction: 0.2,
-                    ),
-                    color: AppColors.primaryColor,
-                    child: Container(
-                      margin: EdgeInsets.only(
-                        left: Sizes.MARGIN_20,
-                        top: Sizes.MARGIN_20,
-                        bottom: Sizes.MARGIN_20,
-                      ),
-                      child: MenuList(
-                        menuList: Data.menuList,
-                        selectedItemRouteName:
-                            CertificationPage.certificationPageRoute,
-                      ),
-                    ),
-                  ),
+                  build_menu(context),
                   ContentWrapper(
                     width: assignWidth(
                       context: context,
@@ -113,6 +95,28 @@ class _CertificationPageDesktopState extends State<CertificationPageDesktop>
     );
   }
 
+  ContentWrapper build_menu(BuildContext context) {
+    return ContentWrapper(
+      width: assignWidth(
+        context: context,
+        fraction: 0.2,
+      ),
+      color: AppColors.primaryColor,
+      gradient: Gradients.primaryRedBlue,
+      child: Container(
+        margin: EdgeInsets.only(
+          left: Sizes.MARGIN_20,
+          top: Sizes.MARGIN_20,
+          bottom: Sizes.MARGIN_20,
+        ),
+        child: MenuList(
+          menuList: Data.menuList,
+          selectedItemRouteName: CertificationPage.certificationPageRoute,
+        ),
+      ),
+    );
+  }
+
   Widget _buildCertification(
     BuildContext context,
     Widget? child,
@@ -122,8 +126,9 @@ class _CertificationPageDesktopState extends State<CertificationPageDesktop>
       children: [
         Wrap(
           direction: Axis.horizontal,
-          spacing: assignWidth(context: context, fraction: 0.0099),
-          runSpacing: assignHeight(context: context, fraction: 0.02),
+          // spacing: assignWidth(context: context, fraction: 0.0099),
+          // runSpacing: assignHeight(context: context, fraction: 0.02),
+          spacing: 5,
           children: _certificateList(Data.certificationData),
         ),
       ],
@@ -162,24 +167,28 @@ class _CertificationPageDesktopState extends State<CertificationPageDesktop>
               ),
             ),
           ),
-          child: PortfolioCard(
-            imageUrl: certificationData[i].image,
-            onTap: () => {_viewCertificate(certificationData[i].url)},
-            title: certificationData[i].title,
-            subtitle: certificationData[i].awardedBy,
-            actionTitle: StringConst.VIEW,
-            height: isDisplaySmallDesktopOrIpadPro(context)
-                ? assignHeight(context: context, fraction: 0.3)
-                : assignHeight(context: context, fraction: 0.45),
-            width: isDisplaySmallDesktopOrIpadPro(context)
-                ? assignWidth(
-                    context: context,
-                    fraction: 0.3,
-                  )
-                : assignWidth(
-                    context: context,
-                    fraction: certificationData[i].imageSize,
-                  ),
+          child: Card(
+            elevation: 26,
+            shadowColor: Colors.black,
+            child: PortfolioCard(
+              imageUrl: certificationData[i].image,
+              onTap: () => {_viewCertificate(certificationData[i].url)},
+              title: certificationData[i].title,
+              subtitle: certificationData[i].awardedBy,
+              actionTitle: StringConst.VIEW,
+              height: isDisplaySmallDesktopOrIpadPro(context)
+                  ? assignHeight(context: context, fraction: 0.3)
+                  : assignHeight(context: context, fraction: 0.45),
+              width: isDisplaySmallDesktopOrIpadPro(context)
+                  ? assignWidth(
+                      context: context,
+                      fraction: 0.3,
+                    )
+                  : assignWidth(
+                      context: context,
+                      fraction: certificationData[i].imageSize,
+                    ),
+            ),
           ),
         ),
       );

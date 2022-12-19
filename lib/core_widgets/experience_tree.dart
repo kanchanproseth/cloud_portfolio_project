@@ -10,6 +10,7 @@ import 'experience_section.dart';
 class ExperienceTree extends StatelessWidget {
   ExperienceTree({
     required this.experienceData,
+    this.listHeaderWidget,
     this.head,
     this.widthOfTree,
     this.headTitle,
@@ -22,6 +23,7 @@ class ExperienceTree extends StatelessWidget {
     this.scrollController,
   });
 
+  final Widget? listHeaderWidget;
   final Widget? head;
   final double? widthOfTree;
   final String? headTitle;
@@ -41,6 +43,10 @@ class ExperienceTree extends StatelessWidget {
       child: ListView(
         controller: scrollController,
         children: [
+          ((listHeaderWidget != null) ? listHeaderWidget! : Container()),
+          SizedBox(
+            height: 50,
+          ),
           Center(
             child: Container(
               padding: EdgeInsets.all(Sizes.PADDING_8),

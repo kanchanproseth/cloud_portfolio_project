@@ -63,15 +63,32 @@ class TrailingInfo extends StatelessWidget {
           //       ),
           // ),
           spacingWidget ?? Spacer(flex: 1),
+          // middleWidget ??
+          //     RotatedBox(
+          //       quarterTurns: 1,
+          //       child: Text(
+          //         info,
+          //         textAlign: TextAlign.end,
+          //         style: theme.textTheme.bodyText1!.copyWith(
+          //           color: AppColors.black,
+          //           fontWeight: FontWeight.w200,
+          //         ),
+          //       ),
+          //     ),
           spacingWidget ?? Spacer(flex: 1),
-          Text(
-            info,
-            textAlign: TextAlign.end,
-            style: theme.textTheme.bodyText1!.copyWith(
-              color: AppColors.black,
-              fontWeight: FontWeight.w200,
-            ),
-          )
+          InkWell(
+            onTap: onTrailingWidgetPressed,
+            child: trailingWidget ??
+                CircularContainer(
+                  color: AppColors.primaryColor,
+                  width: Sizes.WIDTH_30,
+                  height: Sizes.HEIGHT_30,
+                  child: Icon(
+                    Icons.chevron_right,
+                    color: AppColors.secondaryColor,
+                  ),
+                ),
+          ),
         ],
       ),
     );

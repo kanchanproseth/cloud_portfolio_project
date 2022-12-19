@@ -9,7 +9,7 @@ class StringConst {
   static const String HOME = "Home";
   static const String ABOUT_ME = "About Me";
   static const String PORTFOLIO = "Portfolio";
-  static const String EXPERIENCE = "Experience";
+  static const String ME = "ME";
   static const String WORK = "Where I've Worked";
   static const String SERVICES = "Services";
   static const String CONTACT = "Contact";
@@ -54,17 +54,17 @@ class StringConst {
   static const String SEND_MESSAGE = "Send Message";
 
   //Skills
+  static const String IOS = "iOS";
+  static const String SWIFT = "Swift";
   static const String FLUTTER = "Flutter";
   static const String JAVA = "Java";
   static const String ANDROID = "Android";
   static const String KOTLIN = "Kotlin";
-  static const String JAVASCRIPT = "Javascript";
-  static const String PHP = "PHP";
-  static const String LARAVEL = "Laravel";
   static const String SQL = "SQL";
-  static const String WORDPRESS = "Wordpress";
-  static const String BOOTSTRAP = "Bootstrap";
+  static const String REACTIVEX = "ReactiveX";
+  static const String CSHARP = "C#";
   static const String HTML_CSS = "HTML/CSS";
+  static const String PYTHON = "Python";
 
   //routes
   static const String HOME_PAGE = "/";
@@ -185,90 +185,55 @@ class StringConst {
   static const String DURATION_5 = "June 2019 - July 2022";
 
   //Portfolio, Projects
-  static const String LOGIN_CATALOG = "Login Catalog";
-  static const String LOGIN_CATALOG_SUBTITLE =
-      "A beautiful catalog of login designs";
-  static const String LOGIN_CATALOG_DETAIL =
-      "Login Catalog is a beautiful catalog of login designs built with flutter. The goal is to catalog as many as a 1000 different login/Signup designs to help flutter devs get right to the most important part of their app. Another reason behind the project is to show that flutter can be used to build beautiful and exquisite UI.";
-  static const String LOGIN_CATALOG_GITHUB_URL =
-      "https://github.com/david-legend/login_catalog";
+  static const String HLB_APP = "Hong Leong Bank Cambodia App";
+  static const String HLB_APP_SUBTITLE = "A mobile banking application";
+  static const String HLB_APP_DETAIL =
+      """The app offers language options (Khmer and English) and Day/Night mode for your customisation.
 
-  static const String VYBZ = "Vybz";
-  static const String VYBZ_SUBTITLE =
-      "An app that enlist all tourist sites, restaurants etc.";
-  static const String VYBZ_DETAIL =
-      "Vybz is a very handy app for all outgoing and adventurous people. The app lists all the popular and favorites tourist sites, restaurants etc. in the country. This app was a collaboration between David Cobbina and Joseph Cobbina (Founder, CEO of Petamindz (https://petamindz.com/)).";
-  static const String VYBZ_PLAYSTORE_URL = "";
 
-  static const String COLOSSAL_TOONS = "Colossal Toons";
-  static const String COLOSSAL_TOONS_SUBTITLE =
-      "CT is an app for watching very creative and entertaining animations.";
-  static const String COLOSSAL_TOONS_DETAIL =
-      "Colossal Toons is an animation production company that create exciting and fun to watch animations. The purpose of the app is to help centralize all the animations and stories made by the company. The app is also an easy and convenient way to let all the Colossal Toons fans out there get access to. This app was worked by David Cobbina, Stephen Opoku (https://www.linkedin.com/in/stephen-opoku-damoah/) and Eric Asare (https://www.linkedin.com/in/eric-asare-2550a7142/). ";
-  static const String COLOSSAL_TOONS_PLAYSTORE_URL = "";
+• Open an Account online without having to step foot in a bank’s branch.
+• Account overviews – Check balances and view transaction history
+• Mastercard Debit Card Services – Open up to 5 virtual cards, instant reporting of lost/ stolen card or fraud, request for card replacement, daily transaction limits and more.
+• Fund Transfers – Send money via QR Code and recipients’ account number.
+• Fixed Deposits – Make a new placement, or withdraw direct through our app anytime, anywhere
+• Mobile Phone Top-up payments
+• Make Bill Payments to our Registered Billers
+• Transfer funds on-the-go (i.e. Own Account Transfer, HLBCAM Fund Transfer, Local Interbank Fund Transfer and Overseas Fund Transfer)
+• Alert of Banking Transactions Notification
+• Notified with the latest updates of promotion
 
-  static const String FOODY_BITE = "FoodyBite";
-  static const String FOODY_BITE_SUBTITLE =
-      "A useful free ui kit design for food related apps";
-  static const String FOODY_BITE_DETAIL =
-      "Foodybite is a free ui kit designed by Yagnesh Pipariya and built by David Cobbina. The goal of this project is to fast track development and inspire developers who want to build a food related app. FoodyBite was beautifully crafted with flutter. You can find the foodybite designs at https://www.behance.net/gallery/81858385/Foodybite-Free-UI-Kit-for-Adobe-XD";
-  static const String FOODY_BITE_GITHUB_URL =
-      "https://github.com/david-legend/foodybite";
 
-  static const String ONBOARDING_APP = "Onboarding App";
-  static const String ONBOARDING_APP_SUBTITLE = "An onboarding experience app";
-  static const String ONBOARDING_APP_DETAIL =
-      "Onboarding app is an app that takes you through an elegant onboarding experience. It helps the user understand the basic functionality of the app before using it and its free to use. Check it out on my github page";
-  static const String ONBOARDING_APP_GITHUB_URL =
-      "https://github.com/david-legend/onboarding-app";
 
-  static const String OTP_TEXT_FIELD = "Otp Textfield";
-  static const String OTP_TEXT_FIELD_SUBTITLE =
-      "A useful flutter package for helping with otp";
-  static const String OTP_TEXT_FIELD_DETAIL =
+Less time spent banking, means more time for everything else. Download and experiences swiftly with our Hong Leong Connect App Now! 
+  """;
+  static const String HLB_APP_GITHUB_URL =
+      "https://apps.apple.com/us/app/hong-leong-connect-cambodia/id1336427889";
+
+  static const String CBL = "CBL Beer Ordering App";
+  static const String CBL_SUBTITLE =
+      "An application for distributor/customer to order heineken beer CBL campany easily";
+  static const String CBL_DETAIL =
       "Otp text field is a simple flutter package built to help flutter devs easily implement OTP in their app. It is highly customizable and very easy to use.";
-  static const String OTP_TEXT_FIELD_GITHUB_URL =
-      "https://github.com/david-legend/otp_textfield";
-  static const String OTP_TEXT_FIELD_WEB_URL =
-      "https://pub.dev/packages/flutter_otp_text_field";
+  static const String CBL_GITHUB_URL =
+      "https://apps.apple.com/us/app/cbl-beer-order/id1445516765";
+  static const String CBL_WEB_URL =
+      "https://apps.apple.com/us/app/cbl-beer-order/id1445516765";
 
-  static const String FINOPP = "Finopp";
-  static const String FINOPP_SUBTITLE =
-      "A conceptual app that helps investors find viable businesses to invest in.";
-  static const String FINOPP_DETAIL =
-      "Finopp is an app concept that was showcased by me and my team member Kwabena Adu Darkwa (https://www.linkedin.com/in/kwabenaadudarkwa/) at the African App Launchpad Cup which was held in Egypt, on December 2019. Finopp helps bridge the gap between Investors and business owners. It helps investors find viable businesses to invest in and vice versa.";
-  static const String FINOPP_GITHUB_URL =
-      "https://github.com/david-legend/finopp";
+  static const String GLF = "GL-Digital Finance App";
+  static const String GLF_SUBTITLE =
+      "an app for customer to request qoutation for loan moto, agriculture machin ...";
+  static const String GLF_DETAIL =
+      "‎GL digital finance application is application on smart mobile device for mobile corporate agent. 1. Service summery GL digital finance application is application on smart device for our corporate agent, using this application, our corporates agent";
+  static const String GLF_GITHUB_URL =
+      "https://apps.apple.com/kh/app/gl-digital-finance/id1286271140";
 
-  static const String FLUTTER_CATALOG = "Login Catalog";
-  static const String FLUTTER_CATALOG_SUBTITLE =
-      "A beautiful cataalog of login designs";
-  static const String FLUTTER_CATALOG_DETAIL =
-      "Flutter Catalog is a beautiful catalog of designs built with flutter. The goal is to catalog different components and building blocks of a mobile app to help flutter devs get right to the most important part of their app. Another reason behind the project is to show that flutter can be used to build beautiful and exquisite UI.";
-  static const String FLUTTER_CATALOG_GITHUB_URL = "";
-
-  static const String BEQUIP_LOGISTICS = "B-equip Logistics";
-  static const String BEQUIP_LOGISTICS_SUBTITLE =
-      "Beautifully designed website that expresses the services provided by the company.";
-  static const String BEQUIP_LOGISTICS_DETAIL =
-      "B-equip is well established technical support company registered in Ghana. The company is well versed in CAT machine repairs, troubleshooting, component change out, mid-life service and more. This website was built to show their services and portfolio.";
-  static const String BEQUIP_LOGISTICS_WEB_URL = "http://bequiplogisticsgh.com";
-
-  static const String AERIUM = "Aerium";
-  static const String AERIUM_SUBTITLE =
-      "A progressive web app for showcasing your portfolio.";
-  static const String AERIUM_DETAIL =
-      "As you can tell, you're currently on Aerium right now. Aerium is an elegant progressive web app built to help developers tell their story by showcasing their works and skills.";
-  static const String AERIUM_GITHUB_URL =
-      "https://github.com/david-legend/aerium";
-  static const String AERIUM_WEB_URL = SITE_URL;
-
-  static const String LEARN_UPP = "LearnUpp";
-  static const String LEARN_UPP_SUBTITLE = "A Learning app concept";
-  static const String LEARN_UPP_DETAIL =
-      "LearnUpp is a learning app concept that was designed by Georgina Sekyi (https://www.linkedin.com/in/georgina-sekyi-050932175/). It is a fun project that I am currently working on with flutter. The project is out in the open for anyone to take it to the next step.";
-  static const String LEARN_UPP_GITHUB_URL =
-      "https://github.com/david-legend/learnUpp";
+  static const String BIZ_CARD = "비플 법인카드";
+  static const String BIZ_CARD_SUBTITLE =
+      "Korean application that manage bank card and reciept for claim from management";
+  static const String BIZ_CARD_DETAIL =
+      "‎종이영수증을 더 이상 모으지 말고, 자동 수집된 법인카드 영수증으로 간편하게 경비처리를 하세요 *이 앱은 bizplay “법인카드관리”를 이용하는 경비 사용자에게 제공되는 모바일 앱입니다.* (www.bizplay.co.kr) 아직도 회사 경비처리를 위해서 사용한 법인카드 영수증을 모아두고, 결재문서에 풀로 붙여 경비처리를 하시나요? 이 모든 것을 “비플 법인카드” 모바일에서 쉽고 빠르게 처리하세요. 주요기능 * 법인카드 이번 달 사용금액 /...";
+  static const String BIZ_CARD_WEB_URL =
+      "https://apps.apple.com/us/app/비플-법인카드/id1148906760";
 
   static const String CIRCE = "Circe";
   static const String PROXIMA_NOVA = "ProximaNova";

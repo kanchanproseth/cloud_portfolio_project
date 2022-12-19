@@ -263,24 +263,25 @@ class _ProjectDetailMobileState extends State<ProjectDetailMobile>
                                 },
                               )
                             : Emptiness(),
-                        widget.projectDetails!.isOnPlayStore!
-                            ? InkWell(
-                                onTap: () {
-                                  Functions.launchUrl(
-                                    widget.projectDetails!.playStoreUrl!,
-                                  );
-                                },
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(Sizes.PADDING_8),
-                                  child: Image.asset(
-                                    FilePath.PLAYSTORE,
-                                    width: 24,
-                                    height: 24,
-                                  ),
-                                ),
-                              )
-                            : Emptiness(),
+                        // widget.projectDetails!.isOnPlayStore!
+                        //     ? InkWell(
+                        //         onTap: () {
+                        //           Functions.launchUrl(
+                        //             widget.projectDetails!.playStoreUrl!,
+                        //           );
+                        //         },
+                        //         child: Padding(
+                        //           padding:
+                        //               const EdgeInsets.all(Sizes.PADDING_8),
+                        //           child: Image.asset(
+                        //             FilePath.PLAYSTORE,
+                        //             width: 24,
+                        //             height: 24,
+                        //           ),
+                        //         ),
+                        //       )
+                        //     :
+                        Emptiness(),
                         widget.projectDetails!.isLive!
                             ? SocialButton(
                                 //web

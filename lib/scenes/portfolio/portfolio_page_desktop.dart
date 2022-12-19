@@ -146,7 +146,7 @@ class _PortfolioPageDesktopState extends State<PortfolioPageDesktop>
                       fraction: widthOfLeftContentWrapperAnimation.value,
                     ),
                     color: AppColors.primaryColor,
-//                    gradient: Gradients.primaryGradient,
+                    gradient: Gradients.portfolioGredient,
                     child: Container(
                       margin: EdgeInsets.only(
                         left: Sizes.MARGIN_20,
@@ -243,7 +243,7 @@ class _PortfolioPageDesktopState extends State<PortfolioPageDesktop>
       controller: _scrollController,
       children: [
         Wrap(
-          direction: Axis.horizontal,
+          direction: Axis.vertical,
           spacing: assignWidth(context: context, fraction: 0.0099),
           runSpacing: assignHeight(context: context, fraction: 0.02),
           children: _portfolioItem(Data.portfolioData),
@@ -280,40 +280,44 @@ class _PortfolioPageDesktopState extends State<PortfolioPageDesktop>
               ),
             ),
           ),
-          child: PortfolioCard(
-            imageUrl: portfolioData[i].image,
-            title: portfolioData[i].title,
-            subtitle: portfolioData[i].subtitle,
-            actionTitle: StringConst.VIEW,
-            onTap: () {
-              _navigateToProjectDetail(
-                projectDetails: ProjectDetails(
-                  projectImage: portfolioData[i].image,
-                  projectName: portfolioData[i].title,
-                  projectDescription: portfolioData[i].portfolioDescription,
-                  isPublic: portfolioData[i].isPublic,
-                  isLive: portfolioData[i].isLive,
-                  isOnPlayStore: portfolioData[i].isOnPlayStore,
-                  gitHubUrl: portfolioData[i].gitHubUrl,
-                  hasBeenReleased: portfolioData[i].hasBeenReleased,
-                  technologyUsed: portfolioData[i].technologyUsed,
-                  playStoreUrl: portfolioData[i].playStoreUrl,
-                  webUrl: portfolioData[i].webUrl,
-                ),
-              );
-            },
-            height: isDisplaySmallDesktopOrIpadPro(context)
-                ? assignHeight(context: context, fraction: 0.3)
-                : assignHeight(context: context, fraction: 0.45),
-            width: isDisplaySmallDesktopOrIpadPro(context)
-                ? assignWidth(
-                    context: context,
-                    fraction: 0.3,
-                  )
-                : assignWidth(
-                    context: context,
-                    fraction: portfolioData[i].imageSize,
+          child: Card(
+            elevation: 26,
+            margin: EdgeInsets.all(20.0),
+            child: PortfolioCard(
+              imageUrl: portfolioData[i].image,
+              title: portfolioData[i].title,
+              subtitle: portfolioData[i].subtitle,
+              actionTitle: StringConst.VIEW,
+              onTap: () {
+                _navigateToProjectDetail(
+                  projectDetails: ProjectDetails(
+                    projectImage: portfolioData[i].image,
+                    projectName: portfolioData[i].title,
+                    projectDescription: portfolioData[i].portfolioDescription,
+                    isPublic: portfolioData[i].isPublic,
+                    isLive: portfolioData[i].isLive,
+                    isOnPlayStore: portfolioData[i].isOnPlayStore,
+                    gitHubUrl: portfolioData[i].gitHubUrl,
+                    hasBeenReleased: portfolioData[i].hasBeenReleased,
+                    technologyUsed: portfolioData[i].technologyUsed,
+                    playStoreUrl: portfolioData[i].playStoreUrl,
+                    webUrl: portfolioData[i].webUrl,
                   ),
+                );
+              },
+              height: isDisplaySmallDesktopOrIpadPro(context)
+                  ? assignHeight(context: context, fraction: 0.3)
+                  : assignHeight(context: context, fraction: 0.45),
+              width: isDisplaySmallDesktopOrIpadPro(context)
+                  ? assignWidth(
+                      context: context,
+                      fraction: 0.3,
+                    )
+                  : assignWidth(
+                      context: context,
+                      fraction: portfolioData[i].imageSize,
+                    ),
+            ),
           ),
         ),
       );

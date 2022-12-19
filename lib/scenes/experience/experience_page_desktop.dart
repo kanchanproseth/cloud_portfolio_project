@@ -1,3 +1,6 @@
+import 'package:cloud_portfolio_project/core_widgets/flicker_text_animation.dart';
+import 'package:cloud_portfolio_project/core_widgets/spaces.dart';
+import 'package:cloud_portfolio_project/core_widgets/sub_menu_list.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_portfolio_project/layout/adaptive.dart';
 import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
@@ -13,8 +16,20 @@ class ExperiencePageDesktop extends StatefulWidget {
   _ExperiencePageDesktopState createState() => _ExperiencePageDesktopState();
 }
 
-class _ExperiencePageDesktopState extends State<ExperiencePageDesktop> {
+class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
+    with TickerProviderStateMixin {
   ScrollController _scrollController = ScrollController();
+  double? widthOfImage;
+  late AnimationController _flickerAnimationController;
+
+  @override
+  void initState() {
+    super.initState();
+    _flickerAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 300),
+      vsync: this,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +44,7 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop> {
                   fraction: 0.2,
                 ),
                 color: AppColors.primaryColor,
-//                gradient: Gradients.primaryGradient,
+                gradient: Gradients.certificationGredient,
                 child: Container(
                   margin: EdgeInsets.only(
                     left: Sizes.MARGIN_20,
@@ -94,12 +109,103 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop> {
   }
 
   Widget _buildExperience() {
-    return ExperienceTree(
-      headTitle: StringConst.CURRENT_MONTH_YEAR,
-      tailTitle: StringConst.STARTED_MONTH_YEAR,
-      experienceData: Data.experienceData,
-      scrollController: _scrollController,
-      widthOfTree: assignWidth(context: context, fraction: 0.62),
+    return Expanded(
+      child: ExperienceTree(
+        listHeaderWidget: _buildAboutPageContent(),
+        headTitle: StringConst.CURRENT_MONTH_YEAR,
+        tailTitle: StringConst.STARTED_MONTH_YEAR,
+        experienceData: Data.experienceData,
+        scrollController: _scrollController,
+        widthOfTree: assignWidth(context: context, fraction: 0.62),
+      ),
+    );
+  }
+
+  Widget _buildAboutPageContent() {
+    ThemeData theme = Theme.of(context);
+
+    widthOfImage = isDisplaySmallDesktopOrIpadPro(context)
+        ? 0.2
+        : assignWidth(context: context, fraction: 0.2);
+
+    return Container(
+      padding: EdgeInsets.only(
+        left: (widthOfImage! / 2) + 20,
+        top: isDisplaySmallDesktopOrIpadPro(context)
+            ? assignHeight(context: context, fraction: 0.05)
+            : assignHeight(context: context, fraction: 0.12),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    height: 350,
+                  ),
+                  FlickerTextAnimation(
+                    text: StringConst.INTRO,
+                    textColor: AppColors.primaryColor,
+                    fadeInColor: AppColors.primaryColor,
+                    controller: _flickerAnimationController.view,
+                    textStyle: theme.textTheme.bodyText1!.copyWith(
+                      fontSize: Sizes.TEXT_SIZE_36,
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.accentColor2,
+                    ),
+                  ),
+                  FlickerTextAnimation(
+                    text: StringConst.DEV_NAME,
+                    textColor: AppColors.primaryColor,
+                    fadeInColor: AppColors.primaryColor,
+                    fontSize: Sizes.TEXT_SIZE_50,
+                    controller: _flickerAnimationController.view,
+                  ),
+                ],
+              ),
+              Container(
+                child: Image.asset(
+                  FilePath.ME,
+                  width: 500,
+                  height: 500,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
+          ),
+          FlickerTextAnimation(
+            text: StringConst.PUNCH_LINE,
+            textColor: AppColors.primaryColor,
+            fadeInColor: AppColors.primaryColor,
+            controller: _flickerAnimationController.view,
+            textStyle: theme.textTheme.subtitle1!.copyWith(
+              fontSize: Sizes.TEXT_SIZE_34,
+              color: AppColors.accentColor2,
+            ),
+          ),
+          SpaceH16(),
+          Text(
+            StringConst.ABOUT_DEV_TEXT,
+            style: theme.textTheme.bodyText2!.copyWith(
+              color: AppColors.black,
+              fontSize: Sizes.TEXT_SIZE_16,
+            ),
+          ),
+          SpaceH40(),
+          SubMenuList(
+            subMenuData: Data.subMenuData,
+            width: assignWidth(
+                context: context,
+                fraction: 0.6,
+                subs: ((widthOfImage)! / 2) + 20),
+          ),
+        ],
+      ),
     );
   }
 

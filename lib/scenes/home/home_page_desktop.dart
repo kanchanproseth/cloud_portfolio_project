@@ -33,6 +33,7 @@ class _HomePageDesktopState extends State<HomePageDesktop> {
                     ContentWrapper(
                       width: assignWidth(context: context, fraction: 0.2),
                       color: AppColors.primaryColor,
+                      gradient: Gradients.weddingDayBlueGredient,
                       child: Container(
                         margin: const EdgeInsets.only(
                           left: Sizes.MARGIN_20,
