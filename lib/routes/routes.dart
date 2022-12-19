@@ -36,13 +36,9 @@ class RouteConfiguration {
   /// take priority.
   static List<Path> paths = [
     Path(
-      r'^' + AboutPage.aboutPageRoute,
-      (context, matches) => const AboutPage(),
+      r'^' + ExperiencePage.experiencePageRoute,
+      (context, matches) => const ExperiencePage(),
     ),
-//    Path(
-//      r'^' + ContactPage.contactPageRoute,
-//      (context, matches) => const ContactPage(),
-//    ),
     Path(
       r'^' + PortfolioPage.portfolioPageRoute,
       (context, matches) => const PortfolioPage(),
@@ -50,10 +46,6 @@ class RouteConfiguration {
     Path(
       r'^' + ProjectDetailPage.projectDetailPageRoute,
       (context, matches) => const ProjectDetailPage(),
-    ),
-    Path(
-      r'^' + ExperiencePage.experiencePageRoute,
-      (context, matches) => const ExperiencePage(),
     ),
     Path(
       r'^' + CertificationPage.certificationPageRoute,

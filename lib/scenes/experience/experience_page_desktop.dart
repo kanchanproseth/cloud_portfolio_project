@@ -109,15 +109,13 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
   }
 
   Widget _buildExperience() {
-    return Expanded(
-      child: ExperienceTree(
-        listHeaderWidget: _buildAboutPageContent(),
-        headTitle: StringConst.CURRENT_MONTH_YEAR,
-        tailTitle: StringConst.STARTED_MONTH_YEAR,
-        experienceData: Data.experienceData,
-        scrollController: _scrollController,
-        widthOfTree: assignWidth(context: context, fraction: 0.52),
-      ),
+    return ExperienceTree(
+      listHeaderWidget: _buildAboutPageContent(),
+      headTitle: StringConst.CURRENT_MONTH_YEAR,
+      tailTitle: StringConst.STARTED_MONTH_YEAR,
+      experienceData: Data.experienceData,
+      scrollController: _scrollController,
+      widthOfTree: assignWidth(context: context, fraction: 0.52),
     );
   }
 
@@ -136,14 +134,10 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
             : assignHeight(context: context, fraction: 0),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   SizedBox(
                     height: 350,

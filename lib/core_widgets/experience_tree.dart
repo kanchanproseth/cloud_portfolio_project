@@ -44,9 +44,7 @@ class ExperienceTree extends StatelessWidget {
         controller: scrollController,
         children: [
           ((listHeaderWidget != null) ? listHeaderWidget! : Container()),
-          SizedBox(
-            height: 50,
-          ),
+          const SizedBox(height: 50),
           Center(
             child: Container(
               padding: EdgeInsets.all(Sizes.PADDING_8),
@@ -266,7 +264,7 @@ class LocationDateLeaf extends StatelessWidget {
               ),
               SpaceW4(),
               durationIcon ??
-                  Icon(
+                  const Icon(
                     Icons.access_time,
                     color: AppColors.accentColor2,
                     size: 18,
@@ -284,7 +282,7 @@ class LocationDateLeaf extends StatelessWidget {
               ),
               SpaceW4(),
               locationIcon ??
-                  Icon(
+                  const Icon(
                     Icons.location_on,
                     color: AppColors.accentColor2,
                     size: 18,
