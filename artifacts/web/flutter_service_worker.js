@@ -11,9 +11,10 @@ const RESOURCES = {
 "manifest.json": "8127a28a3cbf1575bd95feb38834dbca",
 "icons/Icon-k.png": "302d10cff524bcfd6d2fc90e2e628d27",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
-"assets/artifacts/web/assets/README.md": "b8fa11a5b418e40d6b2f22092a1c9026",
-"assets/AssetManifest.json": "f4de072625907fc4c2e8380060998b56",
-"assets/README.md": "e00a5d2155fa61f26f8c669e08b6dc2c",
+"assets/artifacts/web/assets/artifacts/web/assets/README.md": "b8fa11a5b418e40d6b2f22092a1c9026",
+"assets/artifacts/web/assets/README.md": "e00a5d2155fa61f26f8c669e08b6dc2c",
+"assets/AssetManifest.json": "1a592fd09fb34295e367bbcd8b0ec68c",
+"assets/README.md": "e11b820a5e6a23eb12cd2e4d369be2c9",
 "assets/shaders/ink_sparkle.frag": "ab4751ef630837e294889ca64470bb70",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/elegant_notification/assets/icons/success.png": "a27784120d6634f48b24e12c4604f9d9",
@@ -47,8 +48,8 @@ const RESOURCES = {
 "assets/assets/fonts/proxima_nova/ProximaNova-Regular.otf": "410504d49238e955ba7dc23a7f963021",
 "assets/assets/fonts/proxima_nova/ProximaNova-Bold.otf": "62d4d7d369292a9bf23762465ec6d704",
 "assets/NOTICES": "8e74ddfcafcc116b6f8cf4f7a24ac93b",
-"index.html": "096c11bec485a2cbe75fc3e0f1c64e0a",
-"/": "096c11bec485a2cbe75fc3e0f1c64e0a",
+"index.html": "0096cde739606254fac7a9163fde14f4",
+"/": "0096cde739606254fac7a9163fde14f4",
 "version.json": "5941c2b34847322380ee0179755ec7c8"
 };
 
