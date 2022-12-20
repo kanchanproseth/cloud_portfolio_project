@@ -57,10 +57,10 @@ class RouteConfiguration {
       r'^' + ContactPage.contactPageRoute,
       (context, matches) => const ContactPage(),
     ),
-    Path(
-      r'^' + ReadMePage.readMePageRoute,
-      (context, matches) => const ReadMePage(),
-    ),
+    // Path(
+    //   r'^' + ReadMePage.readMePageRoute,
+    //   (context, matches) => const ReadMePage(),
+    // ),
   ];
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {

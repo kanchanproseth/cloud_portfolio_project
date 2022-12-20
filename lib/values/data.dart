@@ -150,10 +150,10 @@ class Data {
       title: StringConst.CONTACT,
       routeName: ContactPage.contactPageRoute,
     ),
-    MenuData(
-      title: StringConst.README,
-      routeName: ReadMePage.readMePageRoute,
-    ),
+    // MenuData(
+    //   title: StringConst.README,
+    //   routeName: ReadMePage.readMePageRoute,
+    // ),
   ];
 
   static List<SkillData> skillData = [
