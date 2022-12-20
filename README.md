@@ -239,16 +239,23 @@ On the left side be go to
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/20.png)
 
+let it process! you need to move to next step to make it work.
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/21.png)
+
+
 now you need to go AWS Route 53 service
 -> Hosted Zones
 -> Create hosted zone
 
-![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/21.png)
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/23.png)
 
 example you have abc.com
 -> put `abc.com` create
 
-![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/23.png)
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/24.png)
 
 you will see this name space which you need to add it one by one in your domain service provider 
 
@@ -259,16 +266,26 @@ ns-643.awsdns-16.net.
 ns-479.awsdns-59.com.
 ```
 
-![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/24.png)
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/25.png)
+
 
 then go back to AWS Amplify
 -> Domain management
 -> Action
 -> view DNS Records
 -> follow the guideline
-![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/25.png)
 
+Note: the 2 step might need you do the forward domain in your domain service provider. please check in aws document you will found for sure (Godaddy/goodleDomain) 
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/26.png)
+
+Yays deploy and domain configure success now it's up in the cloud 🚀🚀🚀
+
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/22.png)
+
+Here is website with my domain 🥶🥶🥶
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/27.png)
+
+Thanks you so much for reading the whole part. I hope you enjoy and learn something new from this 🫶🫶🫶
 
