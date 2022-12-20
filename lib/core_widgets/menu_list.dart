@@ -48,6 +48,8 @@ class MenuList extends StatelessWidget {
           onTap: () {
             if (menuList[i].title == StringConst.RESUME) {
               Functions.launchUrl(DocumentPath.CV);
+            } else if (menuList[i].title == StringConst.README) {
+              Functions.launchUrl(StringConst.README_URL);
             } else {
               Navigator.of(context).pushNamed(menuList[i].routeName);
             }

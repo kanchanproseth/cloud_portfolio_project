@@ -5,6 +5,7 @@ class StringConst {
   static const String APP_NAME = "";
   static const String APP_TITLE = "Chanproseth Kan Portfolio";
   static const String SITE_URL = "https://chanproseth-dev.site/";
+  static const String README_URL = "https://chanproseth-dev.site/";
 
   static const String HOME = "Home";
   static const String ABOUT_ME = "About Me";
