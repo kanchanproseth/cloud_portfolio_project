@@ -1,4 +1,4 @@
-import 'package:cloud_portfolio_project/scenes/contact/contact_page.dart';
+import 'package:cloud_portfolio_project/scenes/ReadMe/readme_page.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_portfolio_project/scenes/experience/me_page.dart';
 import 'package:cloud_portfolio_project/core_widgets/app_drawer.dart';
@@ -6,7 +6,7 @@ import 'package:cloud_portfolio_project/core_widgets/custom_app_bar.dart';
 import 'package:cloud_portfolio_project/core_widgets/experience_section.dart';
 import 'package:cloud_portfolio_project/values/values.dart';
 
-class ContactPageMobile extends StatelessWidget {
+class ReadMePageMobile extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
   @override
@@ -48,7 +48,7 @@ class ContactPageMobile extends StatelessWidget {
         ),
         drawer: AppDrawer(
           menuList: Data.menuList,
-          selectedItemRouteName: ContactPage.contactPageRoute,
+          selectedItemRouteName: ReadMePage.readMePageRoute,
         ),
         body: TabBarView(
           children: _buildTabContent(Data.experienceData),

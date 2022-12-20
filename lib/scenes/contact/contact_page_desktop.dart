@@ -5,11 +5,12 @@ import 'package:cloud_portfolio_project/app_utils/api_manager.dart';
 import 'package:cloud_portfolio_project/core_widgets/flicker_text_animation.dart';
 import 'package:cloud_portfolio_project/core_widgets/spaces.dart';
 import 'package:cloud_portfolio_project/core_widgets/sub_menu_list.dart';
+import 'package:cloud_portfolio_project/scenes/contact/contact_page.dart';
 import 'package:dio/dio.dart';
 import 'package:elegant_notification/elegant_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_portfolio_project/layout/adaptive.dart';
-import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
+import 'package:cloud_portfolio_project/scenes/experience/me_page.dart';
 import 'package:cloud_portfolio_project/core_widgets/content_wrapper.dart';
 import 'package:cloud_portfolio_project/core_widgets/customer_scroller.dart';
 import 'package:cloud_portfolio_project/core_widgets/experience_tree.dart';
@@ -84,7 +85,7 @@ class _ContactPageDesktopState extends State<ContactPageDesktop>
                   ),
                   child: MenuList(
                     menuList: Data.menuList,
-                    selectedItemRouteName: ExperiencePage.experiencePageRoute,
+                    selectedItemRouteName: ContactPage.contactPageRoute,
                   ),
                 ),
               ),

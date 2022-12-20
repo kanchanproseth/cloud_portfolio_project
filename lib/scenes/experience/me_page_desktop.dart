@@ -3,7 +3,7 @@ import 'package:cloud_portfolio_project/core_widgets/spaces.dart';
 import 'package:cloud_portfolio_project/core_widgets/sub_menu_list.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_portfolio_project/layout/adaptive.dart';
-import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
+import 'package:cloud_portfolio_project/scenes/experience/me_page.dart';
 import 'package:cloud_portfolio_project/core_widgets/content_wrapper.dart';
 import 'package:cloud_portfolio_project/core_widgets/customer_scroller.dart';
 import 'package:cloud_portfolio_project/core_widgets/experience_tree.dart';
@@ -12,12 +12,12 @@ import 'package:cloud_portfolio_project/core_widgets/trailing_info.dart';
 import 'package:cloud_portfolio_project/values/values.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
-class ExperiencePageDesktop extends StatefulWidget {
+class MePageDesktop extends StatefulWidget {
   @override
-  _ExperiencePageDesktopState createState() => _ExperiencePageDesktopState();
+  _MePageDesktopState createState() => _MePageDesktopState();
 }
 
-class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
+class _MePageDesktopState extends State<MePageDesktop>
     with TickerProviderStateMixin {
   ScrollController _scrollController = ScrollController();
   double? widthOfImage;
@@ -66,7 +66,7 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
                   ),
                   child: MenuList(
                     menuList: Data.menuList,
-                    selectedItemRouteName: ExperiencePage.experiencePageRoute,
+                    selectedItemRouteName: MePage.mePageRoute,
                   ),
                 ),
               ),

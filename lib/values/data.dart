@@ -134,7 +134,7 @@ class Data {
   static List<MenuData> menuList = [
     MenuData(
       title: StringConst.ME,
-      routeName: ExperiencePage.experiencePageRoute,
+      routeName: MePage.mePageRoute,
     ),
     MenuData(title: StringConst.RESUME, routeName: StringConst.RESUME),
     // MenuData(title: StringConst.ABOUT_ME, routeName: AboutPage.aboutPageRoute),
@@ -149,6 +149,10 @@ class Data {
     MenuData(
       title: StringConst.CONTACT,
       routeName: ContactPage.contactPageRoute,
+    ),
+    MenuData(
+      title: StringConst.README,
+      routeName: ReadMePage.readMePageRoute,
     ),
   ];
 

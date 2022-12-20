@@ -10,6 +10,7 @@ class StringConst {
   static const String ABOUT_ME = "About Me";
   static const String PORTFOLIO = "Portfolio";
   static const String ME = "ME";
+  static const String README = "ReadMe";
   static const String WORK = "Where I've Worked";
   static const String SERVICES = "Services";
   static const String CONTACT = "Contact";
@@ -75,7 +76,8 @@ class StringConst {
   static const String PROJECT_DETAIL_PAGE = "/project-detail";
   static const String SERVICES_PAGE = "/services";
   static const String MESSAGE_PAGE = "/message-me";
-  static const String EXPERIENCE_PAGE = "/experience";
+  static const String ME_PAGE = "/me";
+  static const String README_PAGE = "/readme";
   static const String RESUME_PAGE = "/resume";
   static const String CERTIFICATION_PAGE = "/certifications";
 

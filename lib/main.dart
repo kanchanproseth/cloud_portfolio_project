@@ -1,4 +1,4 @@
-import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
+import 'package:cloud_portfolio_project/scenes/experience/me_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_portfolio_project/themes/app_theme.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: StringConst.APP_TITLE,
       theme: AppTheme.lightThemeData,
-      initialRoute: ExperiencePage.experiencePageRoute,
+      initialRoute: MePage.mePageRoute,
       onGenerateRoute: RouteConfiguration.onGenerateRoute,
     );
   }
