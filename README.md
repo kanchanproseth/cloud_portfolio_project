@@ -1,6 +1,6 @@
 # Flutter Web Application with AWS Amplify
 
-## Table Content
+### Table Content
 
 * install and create flutter project
 * Setup github actions for CICD
@@ -9,7 +9,7 @@
 
 
 
-### 1.install and create flutter project
+#### 1.install and create flutter project
 
 Please check this link to install flutter and setup environment
 https://docs.flutter.dev/get-started/install
@@ -49,7 +49,7 @@ you can run it test in chrome by using command
 
 once done, you can upload the project to github
 
-### 2. Setup github actions for CICD
+#### 2. Setup github actions for CICD
 
 Here is my project which I already upload in my github private
 
@@ -179,7 +179,7 @@ add the script createandcopytofolder.sh
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/5.png)
 
-### 3. Setup amplify with github for deploy the flutter web app
+#### 3. Setup amplify with github for deploy the flutter web app
 
 👉 now you can jump to AWS Amplify to try powerful of click click automate 👽
 
@@ -210,6 +210,7 @@ add the script createandcopytofolder.sh
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/12.png)
 
 👉 put `artifacts/web` (that's the folder which contain flutter web build after you do the commit)
+
 👉 next
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/13.png)
 
@@ -223,7 +224,9 @@ commit somthing so the github action will run and build flutter web to put in th
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/15.png)
 
 👉 once it is success the error on aws that we saw earlier will be gone
+
 👉 next you will see this page
+
 👉 click the `Allow AWS Amplify to ...` (you know it 😅)
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/16.png)
@@ -241,15 +244,20 @@ you can find the link `https//developer...amplifyapp.com` that is the link to yo
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/19.png)
 
-### 4. configure custom domain in Domain management amplify
+#### 4. configure custom domain in Domain management amplify
 
 Last but not least, you might wanna add you domain to run your web application. well there are an other
 powerful of click click
 
+
 👉 On the left side be go to
+
 👉 Domain management
+
 👉 add domain
+
 👉 just put you domain and save
+
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/20.png)
 
@@ -259,13 +267,17 @@ powerful of click click
 
 
 now you need to go AWS Route 53 service
+
 👉 Hosted Zones
+
 👉 Create hosted zone
+
 
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/23.png)
 
-example you have abc.com
+example you have `abc.com`
+
 👉 put `abc.com` create
 
 
@@ -289,7 +301,7 @@ ns-479.awsdns-59.com.
 👉 view DNS Records
 👉 follow the guideline
 
-Note: the 2 step might need you do the forward domain in your domain service provider. please check in aws document you will found for sure (Godaddy/goodleDomain) 
+`Note: the 2 step might need you do the forward domain in your domain service provider. please check in aws document you will found for sure (Godaddy/goodleDomain)`
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/26.png)
 
@@ -301,5 +313,6 @@ Here is website with my domain 🥶🥶🥶
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/27.png)
 
-Thanks you so much for reading the whole part. I hope you enjoy and learn something new from this 🫶🫶🫶
+Thanks you so much for reading the whole part. 
+I hope you enjoy and learn something new from this 🫶🫶🫶
 
