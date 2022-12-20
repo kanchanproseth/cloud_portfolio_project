@@ -24,6 +24,7 @@ dependencies:
   dio: ^4.0.6
   elegant_notification: ^1.6.3
   uuid: ^3.0.6
+  flutter_markdown: ^0.6.13
 
 dev_dependencies:
   flutter_test:
@@ -38,6 +39,7 @@ flutter:
   assets:
     - assets/files/
     - assets/screenshots/
+    - assets/../README.md
 
   fonts:
     - family: Circe
