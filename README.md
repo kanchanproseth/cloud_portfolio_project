@@ -239,8 +239,36 @@ On the left side be go to
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/20.png)
 
-
-
+now you need to go AWS Route 53 service
+-> Hosted Zones
+-> Create hosted zone
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/21.png)
+
+example you have abc.com
+-> put `abc.com` create
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/23.png)
+
+you will see this name space which you need to add it one by one in your domain service provider 
+
+```
+ns-2018.awsdns-60.co.uk.
+ns-1449.awsdns-53.org.
+ns-643.awsdns-16.net.
+ns-479.awsdns-59.com.
+```
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/24.png)
+
+then go back to AWS Amplify
+-> Domain management
+-> Action
+-> view DNS Records
+-> follow the guideline
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/25.png)
+
+
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/26.png)
+![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/22.png)
 
