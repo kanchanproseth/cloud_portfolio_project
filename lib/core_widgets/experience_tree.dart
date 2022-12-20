@@ -11,6 +11,7 @@ class ExperienceTree extends StatelessWidget {
   ExperienceTree({
     required this.experienceData,
     this.listHeaderWidget,
+    this.listFooterWidget,
     this.head,
     this.widthOfTree,
     this.headTitle,
@@ -24,6 +25,7 @@ class ExperienceTree extends StatelessWidget {
   });
 
   final Widget? listHeaderWidget;
+  final Widget? listFooterWidget;
   final Widget? head;
   final double? widthOfTree;
   final String? headTitle;
@@ -85,6 +87,8 @@ class ExperienceTree extends StatelessWidget {
               ),
             ),
           ),
+          ((listFooterWidget != null) ? listFooterWidget! : Container()),
+          const SizedBox(height: 50),
         ],
       ),
     );

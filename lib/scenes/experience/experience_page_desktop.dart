@@ -10,6 +10,7 @@ import 'package:cloud_portfolio_project/core_widgets/experience_tree.dart';
 import 'package:cloud_portfolio_project/core_widgets/menu_list.dart';
 import 'package:cloud_portfolio_project/core_widgets/trailing_info.dart';
 import 'package:cloud_portfolio_project/values/values.dart';
+import 'package:reactive_forms/reactive_forms.dart';
 
 class ExperiencePageDesktop extends StatefulWidget {
   @override
@@ -20,7 +21,19 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
     with TickerProviderStateMixin {
   ScrollController _scrollController = ScrollController();
   double? widthOfImage;
+
   late AnimationController _flickerAnimationController;
+
+  final form = FormGroup({
+    'name': FormControl<String>(value: '', validators: [Validators.required]),
+    'email': FormControl<String>(
+        value: '', validators: [Validators.required, Validators.email]),
+    'message': FormControl<String>(validators: [Validators.required]),
+  });
+
+  late TextEditingController _nameTextFieldController;
+  late TextEditingController _emailTextFieldController;
+  late TextEditingController _messageTextFieldController;
 
   @override
   void initState() {
@@ -111,6 +124,7 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
   Widget _buildExperience() {
     return ExperienceTree(
       listHeaderWidget: _buildAboutPageContent(),
+      // listFooterWidget: _buildContactContent(),
       headTitle: StringConst.CURRENT_MONTH_YEAR,
       tailTitle: StringConst.STARTED_MONTH_YEAR,
       experienceData: Data.experienceData,
@@ -139,7 +153,7 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
             children: [
               Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 350,
                   ),
                   FlickerTextAnimation(
@@ -165,8 +179,12 @@ class _ExperiencePageDesktopState extends State<ExperiencePageDesktop>
               Container(
                 child: Image.asset(
                   FilePath.ME,
-                  width: 500,
-                  height: 500,
+                  width: isDisplaySmallDesktopOrIpadPro(context)
+                      ? assignHeight(context: context, fraction: 0)
+                      : assignHeight(context: context, fraction: 0.45),
+                  height: isDisplaySmallDesktopOrIpadPro(context)
+                      ? assignHeight(context: context, fraction: 0)
+                      : assignHeight(context: context, fraction: 0.45),
                   fit: BoxFit.cover,
                 ),
               ),

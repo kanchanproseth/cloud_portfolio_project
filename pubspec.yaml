@@ -20,6 +20,10 @@ dependencies:
   url_launcher: ^6.0.9 
   flutter_feather_icons: ^2.0.0+1 
   cupertino_icons: ^1.0.2
+  reactive_forms: ^14.1.0
+  dio: ^4.0.6
+  elegant_notification: ^1.6.3
+  uuid: ^3.0.6
 
 dev_dependencies:
   flutter_test:

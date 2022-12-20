@@ -2,6 +2,7 @@ library values;
 
 import 'package:cloud_portfolio_project/scenes/about/about_page.dart';
 import 'package:cloud_portfolio_project/scenes/certification/certification_page.dart';
+import 'package:cloud_portfolio_project/scenes/contact/contact_page.dart';
 import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
 import 'package:cloud_portfolio_project/scenes/portfolio/portfolio_page.dart';
 import 'package:flutter/material.dart';

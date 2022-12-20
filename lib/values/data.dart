@@ -146,6 +146,10 @@ class Data {
       title: StringConst.CERTIFICATIONS,
       routeName: CertificationPage.certificationPageRoute,
     ),
+    MenuData(
+      title: StringConst.CONTACT,
+      routeName: ContactPage.contactPageRoute,
+    ),
   ];
 
   static List<SkillData> skillData = [

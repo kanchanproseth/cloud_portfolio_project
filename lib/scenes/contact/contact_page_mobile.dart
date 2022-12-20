@@ -1,187 +1,116 @@
-//import 'package:flutter/material.dart';
-//import 'package:flutter_bloc/flutter_bloc.dart';
-//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-//import 'package:aerium/application/email/email_bloc.dart';
-//import 'package:aerium/core/utils/functions.dart';
-//import 'package:aerium/presentation/pages/contact/contact_page.dart';
-//import 'package:aerium/presentation/widgets/app_drawer.dart';
-//import 'package:aerium/presentation/widgets/contact_form.dart';
-//import 'package:aerium/presentation/widgets/contact_info.dart';
-//import 'package:aerium/presentation/widgets/custom_app_bar.dart';
-//import 'package:aerium/presentation/widgets/socials.dart';
-//import 'package:aerium/presentation/widgets/spaces.dart';
-//import 'package:aerium/values/values.dart';
-//
-//class ContactPageMobile extends StatefulWidget {
-//  @override
-//  _ContactPageMobileState createState() => _ContactPageMobileState();
-//}
-//
-//class _ContactPageMobileState extends State<ContactPageMobile> {
-//  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
-//  EmailBloc _emailBloc;
-//  TextEditingController _emailController;
-//  TextEditingController _messageController;
-//  TextEditingController _phoneNumberController;
-//  TextEditingController _nameController;
-//
-//  @override
-//  void initState() {
-//    _emailBloc = BlocProvider.of<EmailBloc>(context);
-//    _emailController = TextEditingController();
-//    _messageController = TextEditingController();
-//    _phoneNumberController = TextEditingController();
-//    _nameController = TextEditingController();
-//    super.initState();
-//  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    ThemeData theme = Theme.of(context);
-//
-//    return Scaffold(
-//      key: _scaffoldKey,
-//      backgroundColor: AppColors.deepBlue700,
-//      appBar: PreferredSize(
-//        preferredSize: Size.fromHeight(56.0),
-//        child: CustomAppBar(
-//          title: StringConst.CONTACT,
-//          actions: [],
-//          onLeadingPressed: () {
-//            if (_scaffoldKey.currentState.isEndDrawerOpen) {
-//              _scaffoldKey.currentState.openEndDrawer();
-//            } else {
-//              _scaffoldKey.currentState.openDrawer();
-//            }
-//          },
-//          onActionsPressed: null,
+import 'package:flutter/material.dart';
+import 'package:cloud_portfolio_project/scenes/experience/experience_page.dart';
+import 'package:cloud_portfolio_project/core_widgets/app_drawer.dart';
+import 'package:cloud_portfolio_project/core_widgets/custom_app_bar.dart';
+import 'package:cloud_portfolio_project/core_widgets/experience_section.dart';
+import 'package:cloud_portfolio_project/values/values.dart';
+
+class ContactPageMobile extends StatelessWidget {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+
+  @override
+  Widget build(BuildContext context) {
+    ThemeData theme = Theme.of(context);
+    return DefaultTabController(
+      length: Data.experienceData.length,
+      child: Scaffold(
+        key: _scaffoldKey,
+        backgroundColor: AppColors.deepBlue700,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(100.0),
+          child: CustomAppBar(
+            title: StringConst.WORK,
+            onLeadingPressed: () {
+              if (_scaffoldKey.currentState!.isEndDrawerOpen) {
+                _scaffoldKey.currentState!.openEndDrawer();
+              } else {
+                _scaffoldKey.currentState!.openDrawer();
+              }
+            },
+            bottom: TabBar(
+              tabs: _buildTabBar(Data.experienceData),
+              indicatorColor: AppColors.complimentColor1,
+              labelColor: AppColors.complimentColor1,
+              labelPadding: EdgeInsets.all(Sizes.PADDING_8),
+              labelStyle: theme.textTheme.headline6!.copyWith(
+                fontSize: Sizes.TEXT_SIZE_16,
+                fontWeight: FontWeight.w600,
+              ),
+              unselectedLabelColor: AppColors.accentColor,
+              unselectedLabelStyle: theme.textTheme.bodyText1!.copyWith(
+                fontSize: Sizes.TEXT_SIZE_16,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            actions: [],
+          ),
+        ),
+        drawer: AppDrawer(
+          menuList: Data.menuList,
+          selectedItemRouteName: ExperiencePage.experiencePageRoute,
+        ),
+        body: TabBarView(
+          children: _buildTabContent(Data.experienceData),
+        ),
+      ),
+    );
+  }
+
+  List<Widget> _buildTabBar(List<ExperienceData> experienceData) {
+    List<Widget> tabBarItems = [];
+    for (var index = 0; index < experienceData.length; index++) {
+      tabBarItems.add(
+        Text(experienceData[index].company!),
+      );
+    }
+    return tabBarItems;
+  }
+
+  List<Widget> _buildTabContent(List<ExperienceData> experienceData) {
+    List<Widget> tabContent = [];
+    for (var index = 0; index < experienceData.length; index++) {
+      tabContent.add(
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: Sizes.PADDING_12,
+            vertical: Sizes.PADDING_16,
+          ),
+          child: ExperienceSection(
+            position: experienceData[index].position,
+            company: experienceData[index].company,
+            duration: experienceData[index].duration,
+            location: experienceData[index].location,
+            roles: experienceData[index].roles,
+            companyUrl: experienceData[index].companyUrl,
+          ),
+        ),
+      );
+    }
+    return tabContent;
+  }
+}
+
+//      body: Container(
+//        padding: EdgeInsets.symmetric(
+//          horizontal: Sizes.PADDING_16,
+//          vertical: Sizes.PADDING_16,
 //        ),
-//      ),
-//      drawer: AppDrawer(
-//        menuList: Data.menuList,
-//        selectedItemRouteName: ContactPage.contactPageRoute,
-//      ),
-//      body: ListView(
-//        children: [
-//          Container(
-//            padding: const EdgeInsets.symmetric(
-//              horizontal: Sizes.PADDING_16,
-//              vertical: Sizes.PADDING_16,
-//            ),
-//            child: Column(
-//              children: [
-//                Center(
-//                  child: Text(
-//                    StringConst.GET_IN_TOUCH,
-//                    style: theme.textTheme.headline6.copyWith(
-//                      color: AppColors.grey100,
-//                    ),
-//                  ),
-//                ),
-//                SpaceH16(),
-//                ContactInfo(
-//                  crossAxisAlignment: CrossAxisAlignment.center,
-//                  iconsMainAxisAlignment: MainAxisAlignment.center,
-//                  iconSize: Sizes.ICON_SIZE_18,
-//                  iconColor: AppColors.grey100,
-//                  contactTypeTextStyle: theme.textTheme.headline6.copyWith(
-//                    color: AppColors.grey100,
-//                  ),
-//                  contactTextStyle: theme.textTheme.bodyText1.copyWith(
-//                    color: AppColors.grey100,
-//                  ),
-//                  onTap: () {},
-//                ),
-//                SpaceH20(),
-//                Center(
-//                  child: Text(
-//                    StringConst.MESSAGE_ME,
-//                    style: theme.textTheme.headline5.copyWith(
-//                      color: AppColors.grey100,
-//                    ),
-//                  ),
-//                ),
-//                SpaceH16(),
-//                ContactForm(
-//                  padding: const EdgeInsets.symmetric(
-//                    horizontal: Sizes.PADDING_16,
-//                  ),
-//                  controllers: [
-//                    _nameController,
-//                    _phoneNumberController,
-//                    _emailController,
-//                    _messageController,
-//                  ],
-//                ),
-//                SpaceH30(),
-//                SendMessageButton(
-//                  onPressed: () => sendEmail(),
-//                ),
-//                SpaceH20(),
-//                Text(
-//                  StringConst.CONNECT,
-//                  style: theme.textTheme.headline6.copyWith(
-//                    color: AppColors.grey100,
-//                  ),
-//                ),
-//                SpaceH12(),
-//                _buildSocialButtons(),
-//              ],
-//            ),
-//          ),
-//        ],
-//      ),
-//    );
-//  }
-//
-//  Widget _buildSocialButtons() {
-//    return Row(
-//      mainAxisAlignment: MainAxisAlignment.center,
-//      children: [
-//        SocialButton(
-//          alignment: Alignment.centerLeft,
-//          icon: FontAwesomeIcons.linkedin,
-//          color: AppColors.grey100,
-//          onPressed: () {
-//            Functions.launchUrl(StringConst.LINKED_IN_URL);
+//        child: ListView.separated(
+//          itemCount: Data.experienceData.length,
+//          separatorBuilder: (BuildContext context, int index) {
+//            return SpaceH30();
+//          },
+//          itemBuilder: (BuildContext context, int index) {
+//            return ExperienceColumn(
+//              duration: Data.experienceData[index].duration,
+//              position: Data.experienceData[index].position,
+//              company: Data.experienceData[index].company,
+//              location: Data.experienceData[index].location,
+//              role: Data.experienceData[index].role,
+//              onTap: () {
+//                Functions.launchUrl(Data.experienceData[index].companyUrl);
+//              },
+//            );
 //          },
 //        ),
-//        SocialButton(
-//          alignment: Alignment.centerLeft,
-//          icon: FontAwesomeIcons.twitter,
-//          color: AppColors.grey100,
-//          onPressed: () {
-//            Functions.launchUrl(StringConst.TWITTER_URL);
-//          },
-//        ),
-//        SocialButton(
-//          alignment: Alignment.centerLeft,
-//          icon: FontAwesomeIcons.instagram,
-//          color: AppColors.grey100,
-//          onPressed: () {
-//            Functions.launchUrl(StringConst.INSTAGRAM_URL);
-//          },
-//        ),
-//        SocialButton(
-//          alignment: Alignment.centerLeft,
-//          icon: FontAwesomeIcons.telegram,
-//          color: AppColors.grey100,
-//          onPressed: () {
-//            Functions.launchUrl(StringConst.TELEGRAM_URL);
-//          },
-//        ),
-//      ],
-//    );
-//  }
-//
-//  void sendEmail() {
-//    _emailBloc.add(
-//      EmailEvent.sendEmail(
-//        email: _emailController.text,
-//        message: _messageController.text,
-//        phoneNumber: _phoneNumberController.text,
-//        name: _nameController.text,
-//      ),
-//    );
-//  }
-//}
+//      )
