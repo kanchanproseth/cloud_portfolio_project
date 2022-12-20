@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js": "39217a9befce0c86ea25df0b5cb0bf9a",
+  "main.dart.js": "da362a050ebceaa3523b9b9221580bcb",
 "canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62",
 "canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
 "canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
@@ -11,9 +11,12 @@ const RESOURCES = {
 "manifest.json": "8127a28a3cbf1575bd95feb38834dbca",
 "icons/Icon-k.png": "302d10cff524bcfd6d2fc90e2e628d27",
 "flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
-"assets/AssetManifest.json": "07ee1b1a77997d12543431d60e0138c4",
+"assets/AssetManifest.json": "7a82a9d7ff8b4357904006cd2a7a3ac2",
 "assets/shaders/ink_sparkle.frag": "ab4751ef630837e294889ca64470bb70",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/packages/elegant_notification/assets/icons/success.png": "a27784120d6634f48b24e12c4604f9d9",
+"assets/packages/elegant_notification/assets/icons/info.png": "84b36b60ddacca6c063112fd636bdefb",
+"assets/packages/elegant_notification/assets/icons/error.png": "2a84d22ca4a8d9123f1e3149121b0976",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "b37ae0f14cbc958316fac4635383b6e8",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "aa1ec80f1b30a51d64c72f669c1326a7",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "5178af1d278432bec8fc830d50996d6f",
@@ -41,9 +44,9 @@ const RESOURCES = {
 "assets/assets/fonts/proxima_nova/ProximaNova-Thin.otf": "8f0bc01ce5e5becef482d277cb72b728",
 "assets/assets/fonts/proxima_nova/ProximaNova-Regular.otf": "410504d49238e955ba7dc23a7f963021",
 "assets/assets/fonts/proxima_nova/ProximaNova-Bold.otf": "62d4d7d369292a9bf23762465ec6d704",
-"assets/NOTICES": "179b93ebf68841d62adeac07cf93f4b1",
-"index.html": "d1e1f5d8884e5318b5dae45e6178bcd4",
-"/": "d1e1f5d8884e5318b5dae45e6178bcd4",
+"assets/NOTICES": "b7cb7eb8725346188dd9e6ca59305e45",
+"index.html": "281b4df1f7c5d2d84e21b09be8509c3d",
+"/": "281b4df1f7c5d2d84e21b09be8509c3d",
 "version.json": "5941c2b34847322380ee0179755ec7c8"
 };
 
