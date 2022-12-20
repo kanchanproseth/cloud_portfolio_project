@@ -45,8 +45,8 @@ const RESOURCES = {
 "assets/assets/fonts/proxima_nova/ProximaNova-Regular.otf": "410504d49238e955ba7dc23a7f963021",
 "assets/assets/fonts/proxima_nova/ProximaNova-Bold.otf": "62d4d7d369292a9bf23762465ec6d704",
 "assets/NOTICES": "b7cb7eb8725346188dd9e6ca59305e45",
-"index.html": "281b4df1f7c5d2d84e21b09be8509c3d",
-"/": "281b4df1f7c5d2d84e21b09be8509c3d",
+"index.html": "579af7f21c158fd702f892af424cceb0",
+"/": "579af7f21c158fd702f892af424cceb0",
 "version.json": "5941c2b34847322380ee0179755ec7c8"
 };
 
