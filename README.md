@@ -309,9 +309,7 @@ Yays deploy and domain configure success now it's up in the cloud 🚀🚀🚀
 
 ![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/22.png)
 
-Here is website with my domain 🥶🥶🥶
-
-![alt text](https://github.com/kanchanproseth/cloud_portfolio_project/blob/develop/blogImages/27.png)
+Here is my website https://www.chanproseth-dev.site 🥶🥶🥶
 
 Thanks you so much for reading the whole part. 
 I hope you enjoy and learn something new from this 🫶🫶🫶
